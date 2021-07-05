@@ -53,4 +53,6 @@ app.post('/try',(req,res)=>{
     console.log(req.body);
     res.send("ok");
 })
-app.listen(port);
+app.listen(port, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
