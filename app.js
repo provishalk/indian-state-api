@@ -27,6 +27,9 @@ app.post('/addState', (req, res) => {
     //------------------------------------
     res.send("Success")
 })
+app.get('/', (req, res) => {
+    res.send("Success")
+})
 
 app.post('/addCity', (req, res) => {
     // {"short_name": "UP","city":{"name":"Zamania","short_name":"ZNA"}}
