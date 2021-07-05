@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = Process.env.PORT || 3000 ;
+const port = process.env.PORT || 3006 ;
 const mongoose = require('mongoose');
 const cors = require('cors')
 mongoose.connect(
@@ -50,6 +50,4 @@ app.post('/try',(req,res)=>{
     console.log(req.body);
     res.send("ok");
 })
-server.listen(port,()=>{  // do not add localhost here if you are deploying it
-    console.log("server listening to port "+port);
-});
+app.listen(port);
